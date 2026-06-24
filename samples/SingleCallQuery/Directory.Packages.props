@@ -1,0 +1,7 @@
+<!-- Disable central package management (the repo root enables it). The sample pins
+     its own package versions inline, so it must opt out of CPM here. -->
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,7 @@
+<!-- Stop MSBuild from walking up into the Roslyn repo's Arcade build configuration.
+     This keeps the sample self-contained and buildable with a plain `dotnet` SDK. -->
+<Project>
+  <PropertyGroup>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+</Project>

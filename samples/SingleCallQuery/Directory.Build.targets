@@ -1,0 +1,3 @@
+<!-- Empty: stops the upward search so the repo's Directory.Build.targets isn't imported. -->
+<Project>
+</Project>
