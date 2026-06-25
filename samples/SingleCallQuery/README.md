@@ -102,3 +102,7 @@ loop (no intermediate objects, no delegates, no trees) you need a compiler featu
 generator — because lowering can consume the whole expression spine before delegates/trees
 are materialized. See [`LOWERING-DESIGN.md`](LOWERING-DESIGN.md) for a concrete Roslyn
 `BoundFusedQuery` lowering design grounded in this repo's binder and `LocalRewriter`.
+
+For making that lowering **customizable per `QueryProvider`** (EF SqlServer vs Cosmos vs
+in-memory), see [`PROVIDER-CUSTOMIZATION.md`](PROVIDER-CUSTOMIZATION.md): a static-dispatch +
+shared-SDK + provider-generator architecture, plus the one genuine language change it needs.
