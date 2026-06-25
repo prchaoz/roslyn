@@ -94,3 +94,11 @@ Two further constraints fall out of "provider must be known at the call site":
 
 These aren't accidental gaps — they're the dual of *why* `IQueryable` defers to runtime in
 the first place.
+
+## Going further: true whole-chain fusion
+
+The interceptor only swaps the terminal call. To collapse the *entire* chain into one fused
+loop (no intermediate objects, no delegates, no trees) you need a compiler feature, not a
+generator — because lowering can consume the whole expression spine before delegates/trees
+are materialized. See [`LOWERING-DESIGN.md`](LOWERING-DESIGN.md) for a concrete Roslyn
+`BoundFusedQuery` lowering design grounded in this repo's binder and `LocalRewriter`.
