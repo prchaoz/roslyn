@@ -140,6 +140,10 @@ extraction).
 
 ## Approach 3 — Provider-pluggable compile-time queryable chain rewriter (the T01–T22 plan on this branch)
 
+> Refined in detail in [`mongodb-chain-rewriter.md`](./mongodb-chain-rewriter.md): driver
+> surface (`MongoQuery<T>`), prepared-pipeline runtime model, T12/T13/T14 resolutions for
+> the MongoDB provider, and the corrections this instantiation feeds back into T06/T08.
+
 The general compiler feature already interviewed and task-broken-down in
 `docs/goals/compile-time-queryable/tasks/`: a `[CompileTimeQueryable("<rewriter AQN>")]`
 attribute on the provider's queryable type; the binder detects a terminated chain
